@@ -31,6 +31,7 @@ lastUpdated: 2026-10-12
 | [10. 远程继续会话][lesson-10] | 远程（可选） | 使用 `/remote` 从网页或移动端查看正在进行的本地会话 |
 | [11. 探索 Canvas][lesson-11] | Canvas | 从 Repository Issues Kanban Canvas 开始工作 |
 | [12. 使用 GitHub Pages 部署网站][lesson-12] | 部署 | 审查并合并 Pages 工作流，然后确认网站已发布 |
+| [12. 使用 GitHub Pages 部署网站][lesson-12] | 部署 | 审查并合并 Pages 工作流，然后确认网站已发布 |
 | [13. 回顾与后续步骤][lesson-13] | 回顾 | 回顾工作流并继续学习 |
 
 ## 开始学习
@@ -52,5 +53,6 @@ lastUpdated: 2026-10-12
 [lesson-9]: 9-automations/
 [lesson-10]: 10-remote/
 [lesson-11]: 11-canvas/
+[lesson-12]: 12-deploy-pages/
 [lesson-12]: 12-deploy-pages/
 [lesson-13]: 13-review/

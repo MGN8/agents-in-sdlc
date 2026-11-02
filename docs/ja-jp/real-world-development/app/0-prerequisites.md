@@ -3,14 +3,14 @@ title: "レッスン 0 - 前提条件"
 description: "GitHub Copilot app のレッスンに向けて、Tailspin Toys プロジェクト用の Node.js をインストールし、テンプレートからリポジトリの自分用コピーを作成します。"
 authors:
   - geektrainer
-lastUpdated: 2026-06-30
+lastUpdated: 2026-10-22
 ---
 
 GitHub Copilot app は、Copilot と GitHub の両方を一元的に扱うデスクトップアプリです。Issue や pull request にすばやくアクセスでき、もちろん GitHub Copilot を使った開発も可能です。このワークショップでは、Astro で構築された Tailspin Toys アプリと GitHub Copilot app を使い、ローカル環境で作業します。始める前に、Node.js がローカルにインストールされていることを確認してから、Copilot app をインストールします。
 
 このレッスンでは、次の内容を学習します。
 
-- プロジェクトのテストを実行できるよう Node.js をインストールする。
+- プロジェクトのテストをコンピューター上で実行できるよう Node.js をインストールする。
 - テンプレートから Tailspin Toys プロジェクトの自分用コピーを作成する。
 
 ## Node.js をインストールする
@@ -20,13 +20,14 @@ GitHub Copilot app は、Copilot と GitHub の両方を一元的に扱うデス
 どのプラットフォームでも、公式インストーラーを使うのが最も簡単です。
 
 1. Windows Terminal、macOS のターミナル、または普段使用しているターミナルを開きます。
-2. 次のコマンドを実行し、インストールされている Node.js のバージョンを確認します。
+2. 次のコマンドを実行し、インストール済みの Node.js と npm のバージョンを確認します。
 
     ```shell
     node --version
+    npm --version
     ```
 
-3. プロジェクトの README と `package.json` に記載されている要件を満たしていれば、次のセクションに進めます。
+3. どちらのコマンドも成功し、Node.js がプロジェクトの README と `package.json` に記載されている要件を満たしていれば、次のセクションに進めます。
 
 > [!TIP]
 > Node.js がインストールされていない場合、または更新が必要な場合にのみ、以降の手順を実行してください。
@@ -39,9 +40,13 @@ GitHub Copilot app は、Copilot と GitHub の両方を一元的に扱うデス
 
     ```bash
     node --version
+    npm --version
     ```
 
-9. インストールしたバージョンが表示されることを確認します。
+9. インストールした Node.js と npm のバージョンが表示されることを確認します。
+
+> [!IMPORTANT]
+> Copilot app のエージェントも `node --version` と `npm --version` を実行できる必要があります。普段使っているターミナルで成功しても、アプリから利用できるとは限りません。Node.js のインストール後、または PATH の変更後は、アプリを完全に終了してから再起動してください。セッション内でいずれかのコマンドが失敗する場合は、続行する前に[セッション環境のトラブルシューティング][session-environment]を確認してください。
 
 > [!IMPORTANT]
 > 各ワークツリーには、プロジェクトの依存関係と E2E チェック用の Playwright Chromium も必要です。ワークツリーの準備では学習用リポジトリの README に従い、インストールの要求は内容を確認してから承認してください。
@@ -53,11 +58,11 @@ Tailspin Toys プロジェクトの自分用コピーを使って作業します
 1. 新しいブラウザーウィンドウで、このラボの GitHub リポジトリ `https://github.com/github-samples/tailspin-toys` を開きます。
 2. ラボ用リポジトリのページで **Use this template** ボタンを選択し、**Create a new repository** を選択して、リポジトリの自分用コピーを作成します。
 
-    ![Use this template ボタンのドロップダウンで Create a new repository が選択されている画面](../../../_images/app-0-use-template.png)
+    ![Use this template ボタンのドロップダウンで Create a new repository が選択されている画面](../../../_images/app:0- use-template.png)
 
 3. GitHub または Microsoft が主催するイベントの一環としてワークショップに参加している場合は、メンターの指示に従ってください。それ以外の場合は、GitHub Copilot を利用できる Organization に新しいリポジトリを作成できます。
 
-    ![github-samples/tailspin-toys がテンプレートに設定され、リポジトリ名が入力された Create a new repository フォーム](../../../_images/app-0-create-repository.png)
+    ![github-samples/tailspin-toys がテンプレートに設定され、リポジトリ名が入力された Create a new repository フォーム](../../../_images/app:0- create-repository.png)
 
 4. 作成したリポジトリのパス (**organization-or-user-name/repository-name**) を記録します。このラボで後ほど使用します。
 
@@ -86,3 +91,4 @@ Tailspin Toys プロジェクトの自分用コピーを使って作業します
 [node-download]: https://nodejs.org/en/download
 [template-repository]: https://docs.github.com/repositories/creating-and-managing-repositories/creating-a-template-repository
 [about-copilot-app]: https://docs.github.com/copilot/concepts/agents/github-copilot-app
+[session-environment]: ../3-agent-modes/#issue-からセッションを開始する
